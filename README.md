@@ -28,18 +28,19 @@ Whenever you want to start a new Vite project using this custom `src/` template:
     rm -rf src
     ```
 
-4.  **Pull Your Custom `src/` Contents using `degit`:**
-    Use the `degit` tool to pull the contents of your template repository directly into the `src/` folder of your new Vite project:
+4.  **Unzip Your Custom `src/` Contents:**
+    Copy your zipped `src` template file into your new project's root directory, then unzip it directly into the `src/` folder.
 
     ```bash
-    npx degit your-username/my-custom-src-template src
+    # Example using `unzip` command (you might need to install this if not available)
+    cp /path/to/src.zip . # Copy the zip file to the current directory
+    unzip src.zip -d src/  # Unzip it into the 'src' folder
+    rm src.zip             # (Optional) Remove the zip file after extraction
     ```
+    Alternatively, you can manually extract the contents of your `src` template zip file into the `src/` folder of your new project using your operating system's file explorer.
 
-    * `npx degit`: Executes `degit` without requiring a global installation.
-
-    * `your-username/my-custom-src-template`: The user/repo name of the Git repository you created in Step 1.
-
-    * `src`: This specifies that the contents of your template repository should be copied into the `src/` directory within your *current* project (`my-new-project`).
+    **Note:** You will need to manually manage the creation and distribution of your `src` template as a `.zip` file.
+      
 
 5.  **Install Dependencies and Start Development:**
     Finally, install your project's dependencies and start the development server:
